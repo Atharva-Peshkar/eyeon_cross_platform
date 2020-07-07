@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FireAuth" x:Class="FireAuth.MainPage" BackgroundColor="White">
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center" BackgroundColor="White">
+        
+        <Image Source="eyeon_logo" HorizontalOptions="Center" HeightRequest="200" WidthRequest="200" AnchorX="100" AnchorY="100"/> 
+        
+        
+        <StackLayout Spacing="20">
+            <Entry
+                Placeholder="E-mail"
+                Keyboard="Email"
+                x:Name="EmailInput"
+                ClearButtonVisibility="WhileEditing">
+                <Entry.Behaviors>
+                    <local:EmailValidatorBehavior/>
+                </Entry.Behaviors>
+            </Entry>
+
+            <Entry
+                Placeholder="Password"
+                IsPassword="true"
+                x:Name="PasswordInput"
+                ClearButtonVisibility="WhileEditing">
+                <Entry.Behaviors>
+                    <local:PasswordValidationBehavior/>
+                </Entry.Behaviors>
+            </Entry>
+
+            <Button
+                Text="Sign In"
+                Clicked="LoginClicked"
+                Margin="20, 20"
+                BackgroundColor="Plum"
+                TextColor="FloralWhite"
+                CornerRadius="25"
+                >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                            Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                            Value="0.8" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+            <Label
+                Text="New? We'd be happy to have you onboard!"
+                HorizontalOptions="Center"
+                TextColor="#4682B4"
+                FontSize="Subtitle"
+                Margin="0, 20"
+                />
+            <Button
+                Text="Sign Up"
+                Clicked="SignUpClicked"
+                Margin="20, 0"
+                BackgroundColor="Salmon"
+                TextColor="FloralWhite"
+                CornerRadius="25"
+                >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                            Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                            Value="0.8" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

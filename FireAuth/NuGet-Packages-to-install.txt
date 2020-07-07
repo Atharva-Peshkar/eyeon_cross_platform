@@ -1,0 +1,11 @@
+For the following project to run we need to install the following NuGet Packages.
+
+FireAuth
+	1) Xamarin.Firebase.Core (v60.1142.1)
+	
+FireAuth.Android
+	1) Xamarin.Firebase.Auth (v60.1142.1)
+	2) Xamarin.Firebase.Core (v60.1142.1)
+
+FireAuth.iOS
+	1) Xamarin.Firebase.iOS.Auth

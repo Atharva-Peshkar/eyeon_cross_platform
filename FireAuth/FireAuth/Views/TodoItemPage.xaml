@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FireAuth.TodoItemPage" Title="{Binding Name}">
+    <StackLayout Orientation="Vertical">
+        <StackLayout Margin="20" Padding="20" Spacing="10">
+        <Label Text="Name" FontSize="Medium"/>
+        <Entry  ClearButtonVisibility="WhileEditing"  Text="{Binding Name}" TextColor="RoyalBlue" FontSize="Medium"/>
+        <Label Text="Notes" FontSize="Medium"/>
+         <Entry  ClearButtonVisibility="WhileEditing" Text="{Binding Notes}" TextColor="DeepPink" FontSize="Medium"/>
+        <Label Text="Done" FontSize="Medium"/>
+        <Switch OnColor="LightGreen" IsToggled="{Binding Done}"/>
+    </StackLayout>
+    <StackLayout Spacing="20" Margin="40">
+        <Button Text="Save" Clicked="OnSaveClicked" 
+                TextColor="Honeydew" 
+                BackgroundColor="LimeGreen" 
+                CornerRadius="25"/>
+        
+        <Button Text="Delete" Clicked="OnDeleteClicked" 
+                TextColor="FloralWhite" 
+                BackgroundColor="MediumOrchid" 
+                CornerRadius="25"/>
+        
+        <Button Text="Cancel" Clicked="OnCancelClicked"
+                TextColor="Honeydew" 
+                BackgroundColor="Crimson" 
+                CornerRadius="25"/>
+    </StackLayout>
+    </StackLayout>
+</ContentPage>

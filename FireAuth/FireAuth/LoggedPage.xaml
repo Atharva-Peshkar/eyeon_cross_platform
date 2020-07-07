@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:gv="clr-namespace:GoogleVisionBarCodeScanner;assembly=BarcodeScanner.XF"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FireAuth.LoggedPage">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="20"  Spacing="45" Padding="10">
+                
+                <ImageButton Source="logout.png" x:Name="LogoutButton"  Clicked="LogoutButton_Clicked" WidthRequest="50" HeightRequest="50"
+                        CornerRadius="0">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+
+                <ImageButton Source="flash.png"  x:Name="FlashlightButton" Clicked="FlashlightButton_Clicked" WidthRequest="50" HeightRequest="50"
+                        CornerRadius="0">
+
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                                     Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                                    Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+
+                <ImageButton Source="list.png" x:Name="ShoppingListButton"  Clicked="ShoppingList_Clicked" WidthRequest="50" HeightRequest="50"
+                        CornerRadius="0">
+
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+
+                <ImageButton Source="checkout.png" x:Name="CheckoutButton"  Clicked="Checkout_Clicked" WidthRequest="50" HeightRequest="50"
+                        CornerRadius="0">
+
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+
+            </StackLayout>
+            <!--Customized Size-->
+            <StackLayout Orientation="Vertical" Padding="10">
+                <gv:CameraView  WidthRequest="200" HeightRequest="200" OnDetected="CameraView_OnDetected" 
+            DefaultTorchOn="False" VibrationOnDetected="True" AutoStartScanning="True"/>
+            </StackLayout>
+
+            <!--Shopping Cart-->
+            <StackLayout>
+                <Grid ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image HorizontalOptions="Center" Grid.Column="1" Source="cart.png" HeightRequest="50" WidthRequest="50"/>
+                    <Label VerticalTextAlignment="Center" Grid.Column="2" FontSize="Medium" FontAttributes="Bold" TextColor="DeepPink">Your Cart</Label>
+                    <Button 
+                        Margin="5, 0"
+                        BackgroundColor="Salmon"
+                        TextColor="FloralWhite"
+                        CornerRadius="25" 
+                        Grid.Column="3" 
+                        Clicked="ClearCart" 
+                        Text="Clear Cart">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                            Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                            Value="0.8" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Button>
+                </Grid>
+
+                <ListView x:Name="ShoppingCartListView" ItemsSource="{Binding ShoppingCart}" ItemSelected="OnListItemSelected" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                       Text="{Binding Product, StringFormat='Product: {0:F0}'}"
+                                       TextColor="MediumOrchid"
+                                       FontSize="Subtitle"/>
+                                    <Label Grid.Row="1"
+                                       Text="{Binding Price, StringFormat='Price: Rs.{0:F0}'}"
+                                       TextColor="HotPink"
+                                       FontSize="Subtitle"
+                                       VerticalOptions="End" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

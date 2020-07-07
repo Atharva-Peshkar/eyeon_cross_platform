@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FireAuth.BillSummary">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Padding="10">
+                <Button 
+                        Margin="20, 0"
+                        BackgroundColor="Salmon"
+                        TextColor="FloralWhite"
+                        CornerRadius="25" 
+                        Grid.Column="3" 
+                        Clicked="Appexit" 
+                        Text="Exit">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+                <Label Padding="20" Text="Thank you for shopping with us :-) Your shopping summary is as follows:" FontSize="Large" TextColor="Teal" HorizontalTextAlignment="Center"/>
+                <Label Margin="5" x:Name="PriceLabel"  Text ="{Binding Billtotal, StringFormat='Your total bill: Rs. {0:F0}/-'}" FontAttributes="Bold" FontSize="Medium" TextColor="Crimson"/>
+                <Label Margin="5" x:Name="WeightLabel"  Text ="{Binding CartWeight, StringFormat='Your total cart weight: {0:F0} Kg'}" FontAttributes="Bold" FontSize="Medium" TextColor="Crimson"/>
+            </StackLayout>
+            <Label Margin="10" HorizontalOptions="Center"  Text ="Your cart contains" FontSize="Medium" TextColor="DarkMagenta"/>
+            <ListView x:Name="BillSummaryList" ItemTapped="BillItemTapped" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label
+                                       Text="{Binding Product, StringFormat='Product: {0:F0}'}"
+                                       TextColor="MediumOrchid"
+                                       FontSize="Subtitle"/>
+                                <Label Grid.Row="1"
+                                       Text="{Binding Price, StringFormat='Price: Rs.{0:F0}'}"
+                                       TextColor="HotPink"
+                                       FontSize="Subtitle"
+                                       VerticalOptions="End" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
