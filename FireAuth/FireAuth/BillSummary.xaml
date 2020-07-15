@@ -6,67 +6,70 @@
              mc:Ignorable="d"
              x:Class="FireAuth.BillSummary">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Vertical" Padding="10">
-                <Button 
-                        Margin="20, 0"
-                        BackgroundColor="Salmon"
-                        TextColor="FloralWhite"
-                        CornerRadius="25" 
-                        Grid.Column="3" 
-                        Clicked="Appexit" 
-                        Text="Exit">
-                    <VisualStateManager.VisualStateGroups>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="Scale"
-                            Value="1" />
-                                </VisualState.Setters>
-                            </VisualState>
+        <ScrollView>
+            <FlexLayout  Direction="Column" Wrap="NoWrap" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Center" FlexLayout.Basis="100%" Margin="5">
+                <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignContent="Start" AlignItems="Stretch" FlexLayout.Basis="80%">
 
-                            <VisualState x:Name="Pressed">
-                                <VisualState.Setters>
-                                    <Setter Property="Scale"
-                            Value="0.8" />
-                                </VisualState.Setters>
-                            </VisualState>
+                    <Button 
+                            Margin="20, 0"
+                            BackgroundColor="Salmon"
+                            TextColor="FloralWhite"
+                            CornerRadius="25" 
+                            Grid.Column="3" 
+                            Clicked="Appexit" 
+                            Text="Exit">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
 
-                        </VisualStateGroup>
-                    </VisualStateManager.VisualStateGroups>
-                </Button>
-                <Label Padding="20" Text="Thank you for shopping with us :-) Your shopping summary is as follows:" FontSize="Large" TextColor="Teal" HorizontalTextAlignment="Center"/>
-                <Label Margin="5" x:Name="PriceLabel"  Text ="{Binding Billtotal, StringFormat='Your total bill: Rs. {0:F0}/-'}" FontAttributes="Bold" FontSize="Medium" TextColor="Crimson"/>
-                <Label Margin="5" x:Name="WeightLabel"  Text ="{Binding CartWeight, StringFormat='Your total cart weight: {0:F0} Kg'}" FontAttributes="Bold" FontSize="Medium" TextColor="Crimson"/>
-            </StackLayout>
-            <Label Margin="10" HorizontalOptions="Center"  Text ="Your cart contains" FontSize="Medium" TextColor="DarkMagenta"/>
-            <ListView x:Name="BillSummaryList" ItemTapped="BillItemTapped" HasUnevenRows="True">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Padding="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Label
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Button>
+
+                    <Label  Text="Thank you for shopping with us :-) Your shopping summary is as follows:" FontSize="Large" TextColor="Teal" HorizontalTextAlignment="Center"/>
+                    <Label  x:Name="PriceLabel"  Text ="{Binding Billtotal, StringFormat='Your total bill: Rs. {0:F0}/-'}" FontAttributes="Bold" FontSize="Medium" TextColor="Crimson"/>
+                    <Label  x:Name="WeightLabel"  Text ="{Binding CartWeight, StringFormat='Your total cart weight: {0:F0} Kg'}" FontAttributes="Bold" FontSize="Medium" TextColor="Crimson"/>
+                    <Label  FlexLayout.AlignSelf="Center" FontAttributes="Bold" HorizontalOptions="Center"  Text ="Your cart contains" FontSize="Medium" TextColor="DarkMagenta"/>
+                </FlexLayout>
+
+                <ListView x:Name="BillSummaryList" ItemTapped="BillItemTapped" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label
                                        Text="{Binding Product, StringFormat='Product: {0:F0}'}"
                                        TextColor="MediumOrchid"
                                        FontSize="Subtitle"/>
-                                <Label Grid.Row="1"
+                                    <Label Grid.Row="1"
                                        Text="{Binding Price, StringFormat='Price: Rs.{0:F0}'}"
                                        TextColor="HotPink"
                                        FontSize="Subtitle"
                                        VerticalOptions="End" />
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </FlexLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

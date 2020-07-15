@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\eyeon_cross-plat\\FireAuth\\FireAuth\\FireAuth.csproj": {}
+    "C:\\Users\\DELL\\source\\repos\\eyeon_cross_platform\\FireAuth\\FireAuth\\FireAuth.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\eyeon_cross-plat\\FireAuth\\FireAuth\\FireAuth.csproj": {
+    "C:\\Users\\DELL\\source\\repos\\eyeon_cross_platform\\FireAuth\\FireAuth\\FireAuth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\eyeon_cross-plat\\FireAuth\\FireAuth\\FireAuth.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\eyeon_cross_platform\\FireAuth\\FireAuth\\FireAuth.csproj",
         "projectName": "FireAuth",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\eyeon_cross-plat\\FireAuth\\FireAuth\\FireAuth.csproj",
+        "projectPath": "C:\\Users\\DELL\\source\\repos\\eyeon_cross_platform\\FireAuth\\FireAuth\\FireAuth.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\eyeon_cross-plat\\FireAuth\\FireAuth\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\source\\repos\\eyeon_cross_platform\\FireAuth\\FireAuth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

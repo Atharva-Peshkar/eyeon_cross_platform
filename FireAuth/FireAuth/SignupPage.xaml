@@ -3,68 +3,64 @@
              xmlns:local="clr-namespace:FireAuth;assembly=FireAuth"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="FireAuth.SignupPage">
-    
+
     <ContentPage.Content>
-        <StackLayout
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Spacing="40"
-            Margin="40,-30">
-            <Label
-                Text="We're happy to have you here!"
-                FontSize="Large"
-                TextColor="HotPink"
-                />
-            <StackLayout Spacing="25">
-                
-                <Entry Keyboard="Text" Placeholder="First Name" MaxLength="20" ClearButtonVisibility="WhileEditing"/>
-                <Entry Keyboard="Text" Placeholder="Last Name" MaxLength="20" ClearButtonVisibility="WhileEditing"/>
-                <Entry x:Name="NewEmailID" Keyboard="Email" Placeholder="Email" ClearButtonVisibility="WhileEditing">
-                    <Entry.Behaviors>
-                        <local:EmailValidatorBehavior/>
-                    </Entry.Behaviors>
-                </Entry>
+        <ScrollView>
+            <FlexLayout  Direction="Column" Wrap="NoWrap" JustifyContent="SpaceEvenly" AlignContent="Stretch" AlignItems="Center">
 
-                <Label Text="Password should contain at least 8 characters, 1 numeric, 1 lowercase, 1 uppercase, 1 special character [eg: No1C#cornar]" TextColor="DeepPink" FontSize="Small"/>
-                <Entry x:Name="NewPassword" IsPassword="True" Placeholder="Password" ClearButtonVisibility="WhileEditing">
-                    <Entry.Behaviors>
-                        <local:PasswordValidationBehavior/>
-                    </Entry.Behaviors>
-                </Entry>
-               
-                <Label Text="Tell us your birthday!" FontSize="Medium" TextColor="HotPink"/>
-                
-                <DatePicker Date="06/01/2019"/>
+                <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Stretch" Margin="15" FlexLayout.Basis="100%">
 
-                <Button 
-                    Text="Sign Up" 
-                    TextColor="Honeydew" 
-                    BackgroundColor="LightPink" 
-                    CornerRadius="25"
-                    Clicked="CreateNewAccount">
-                    <VisualStateManager.VisualStateGroups>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="Scale"
-                            Value="1" />
-                                </VisualState.Setters>
-                            </VisualState>
+                    <Label
+                        FlexLayout.AlignSelf="Center"
+                        Text="We're happy to have you here!"
+                        FontSize="Large"
+                        TextColor="HotPink"/>
 
-                            <VisualState x:Name="Pressed">
-                                <VisualState.Setters>
-                                    <Setter Property="Scale"
-                            Value="0.8" />
-                                </VisualState.Setters>
-                            </VisualState>
+                    <Entry Keyboard="Text" Placeholder="First Name" MaxLength="20" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Keyboard="Text" Placeholder="Last Name" MaxLength="20" ClearButtonVisibility="WhileEditing"/>
+                    <Entry x:Name="NewEmailID" Keyboard="Email" Placeholder="Email" ClearButtonVisibility="WhileEditing">
+                        <Entry.Behaviors>
+                            <local:EmailValidatorBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
 
-                        </VisualStateGroup>
-                    </VisualStateManager.VisualStateGroups>
-                </Button>
+                    <Label Text="Password should contain at least 8 characters, 1 numeric, 1 lowercase, 1 uppercase, 1 special character [eg: No1C#cornar]" TextColor="DeepPink" FontSize="Small"/>
+                    <Entry x:Name="NewPassword" IsPassword="True" Placeholder="Password" ClearButtonVisibility="WhileEditing">
+                        <Entry.Behaviors>
+                            <local:PasswordValidationBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
 
-            </StackLayout>
-            
-        </StackLayout>
-        
+                    <Label Text="Tell us your birthday!" FontSize="Medium" TextColor="HotPink"/>
+
+                    <DatePicker Date="06/01/2019"/>
+
+                    <Button 
+                            Text="Sign Up" 
+                            TextColor="Honeydew" 
+                            BackgroundColor="LightPink" 
+                            CornerRadius="25"
+                            Clicked="CreateNewAccount">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Button>
+
+                </FlexLayout>
+            </FlexLayout>
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>      

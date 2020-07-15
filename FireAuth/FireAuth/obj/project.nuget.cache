@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l1gnjH/fKtrPHy5BLIRX+5dxvAYhXs42mfZSc5EU8RpOptZOk53UXP487EcPonR/7ohvBMtjTKLFssIfn8cyuQ==",
+  "dgSpecHash": "cMU9IqtpsxT/ZSnZKcGcvIWTk7XJ57tYNyRhMteKWNTerZ1fTcXrqySgNwr8Qal3gPr6hVwebpwJOZ3UAg/WLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\eyeon_cross-plat\\FireAuth\\FireAuth\\FireAuth.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\eyeon_cross_platform\\FireAuth\\FireAuth\\FireAuth.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\barcodescanner.xf\\4.6.1\\barcodescanner.xf.4.6.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\firebasedatabase.net\\4.0.4\\firebasedatabase.net.4.0.4.nupkg.sha512",

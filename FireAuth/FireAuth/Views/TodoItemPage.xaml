@@ -2,30 +2,38 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="FireAuth.TodoItemPage" Title="{Binding Name}">
-    <StackLayout Orientation="Vertical">
-        <StackLayout Margin="20" Padding="20" Spacing="10">
-        <Label Text="Name" FontSize="Medium"/>
-        <Entry  ClearButtonVisibility="WhileEditing"  Text="{Binding Name}" TextColor="RoyalBlue" FontSize="Medium"/>
-        <Label Text="Notes" FontSize="Medium"/>
-         <Entry  ClearButtonVisibility="WhileEditing" Text="{Binding Notes}" TextColor="DeepPink" FontSize="Medium"/>
-        <Label Text="Done" FontSize="Medium"/>
-        <Switch OnColor="LightGreen" IsToggled="{Binding Done}"/>
-    </StackLayout>
-    <StackLayout Spacing="20" Margin="40">
-        <Button Text="Save" Clicked="OnSaveClicked" 
+    <ScrollView>
+
+        <FlexLayout Direction="Column" Wrap="NoWrap" JustifyContent="SpaceEvenly" AlignContent="Stretch" AlignItems="Center" FlexLayout.Basis="100%" Margin="5">
+
+            <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Stretch" Margin="10" FlexLayout.Basis="50%">
+                <Label Text="Item name" FontSize="Medium" FontAttributes="Bold"/>
+                <Entry  ClearButtonVisibility="WhileEditing"  Text="{Binding Name}" TextColor="RoyalBlue" FontSize="Medium"/>
+                <Label Text="Item details" FontSize="Medium" FontAttributes="Bold"/>
+                <Entry  ClearButtonVisibility="WhileEditing" Text="{Binding Notes}" TextColor="DeepPink" FontSize="Medium"/>
+                <Label Text="Done buying" FontSize="Medium" FontAttributes="Bold"/>
+                <Switch OnColor="Teal" IsToggled="{Binding Done}" FlexLayout.AlignSelf="Start"/>
+            </FlexLayout>
+
+            <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Stretch" Margin="10" FlexLayout.Basis="40%">
+                <Button Text="Save" Clicked="OnSaveClicked" 
                 TextColor="Honeydew" 
-                BackgroundColor="LimeGreen" 
+                Margin="20,10"
+                BackgroundColor="LimeGreen"
                 CornerRadius="25"/>
-        
-        <Button Text="Delete" Clicked="OnDeleteClicked" 
-                TextColor="FloralWhite" 
+
+                <Button Text="Delete" Clicked="OnDeleteClicked" 
+                TextColor="FloralWhite"
+                Margin="20,10"
                 BackgroundColor="MediumOrchid" 
                 CornerRadius="25"/>
-        
-        <Button Text="Cancel" Clicked="OnCancelClicked"
-                TextColor="Honeydew" 
+
+                <Button Text="Cancel" Clicked="OnCancelClicked"
+                TextColor="Honeydew"
+                Margin="20,10"
                 BackgroundColor="Crimson" 
                 CornerRadius="25"/>
-    </StackLayout>
-    </StackLayout>
+            </FlexLayout>
+        </FlexLayout>
+    </ScrollView>
 </ContentPage>
