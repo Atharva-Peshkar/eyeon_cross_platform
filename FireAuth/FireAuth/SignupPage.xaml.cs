@@ -28,7 +28,7 @@ namespace FireAuth
             try
             {
                 Token = await account_creator.SignUpWithEmailPassword(NewEmailID.Text, NewPassword.Text);
-            } catch(Exception signup) { await DisplayAlert("Error!", "An error occurred, please try again!", "Ok"); }
+            } catch(Exception) { await DisplayAlert("Error!", "An error occurred, please try again!", "Ok"); }
             if (Token != "")
             {
                 await DisplayAlert("SignUp Successful!", "Please sign into your account to proceed.", "Ok");

@@ -25,7 +25,7 @@ namespace FireAuth
             try
             {
                 Token = await auth.LoginWithEmailPassword(EmailInput.Text, PasswordInput.Text);
-            } catch(Exception signin) { await DisplayAlert("Error!","An error occurred, please try again!","Ok"); }
+            } catch(Exception) { await DisplayAlert("Error!","An error occurred, please try again!","Ok"); }
             if (Token != "")
             {
                 bool allowed = false;

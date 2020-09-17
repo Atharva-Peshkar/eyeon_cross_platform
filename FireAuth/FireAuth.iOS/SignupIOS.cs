@@ -26,11 +26,7 @@ namespace FireAuth.iOS
             }
             else
             {
-                try
-                {
-                    return "";
-                }
-                catch (Exception empty) { return ""; }
+                return "";
             }
         }
     }

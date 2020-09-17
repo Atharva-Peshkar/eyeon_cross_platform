@@ -25,15 +25,10 @@ namespace FireAuth.Droid
                     e.PrintStackTrace();
                     return "";
                 }
-                catch(Exception x) { return ""; }
             }
             else
             {
-                try
-                {
-                    return "";
-                }
-                catch (Exception empty) { return ""; }
+                return "";
             }
         }
     }

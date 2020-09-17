@@ -107,7 +107,7 @@
 
                 <!--Customized Size-->
                 <gv:CameraView OnDetected="CameraView_OnDetected" 
-                 DefaultTorchOn="False" VibrationOnDetected="True" AutoStartScanning="True" HeightRequest="200" WidthRequest="300" Margin="10"/>
+                 DefaultTorchOn="False" VibrationOnDetected="True" AutoStartScanning="True"  HeightRequest="200" WidthRequest="300" Margin="10"/>
 
                 <!--Shopping Cart-->
                 <FlexLayout  Direction="Row" Wrap="Wrap" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Center" FlexLayout.Basis="15%" Margin="5">
@@ -150,7 +150,7 @@
 
                     </Grid>
                 </FlexLayout>
-                <ListView x:Name="ShoppingCartListView" ItemsSource="{Binding ShoppingCart}" ItemSelected="OnListItemSelected" HasUnevenRows="True">
+                <ListView x:Name="ShoppingCartListView" ItemsSource="{Binding ShoppingCart}" SelectionMode="None" ItemTapped="OnListItemTapped" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -179,7 +179,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
             </FlexLayout>
         </ScrollView>
     </ContentPage.Content>

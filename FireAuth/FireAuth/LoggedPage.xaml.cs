@@ -30,8 +30,7 @@ namespace FireAuth
             On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
             ShoppingCart = new ObservableCollection<product>();
             ShoppingCartListView.ItemsSource = ShoppingCart;
-            ShoppingCartListView.ItemSelected += OnListItemSelected;
-            ShoppingCartListView.ItemTapped += CartItemTapped;
+            ShoppingCartListView.ItemTapped += OnListItemTapped;
         }
 
 
@@ -103,26 +102,18 @@ namespace FireAuth
                 ShoppingCart.Clear();
             }
         }
-        private async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnListItemTapped(object sender, ItemTappedEventArgs e)
         {
-            product selectedItem = e.SelectedItem as product;
+            product selectedItem = e.Item as product;
+            string iteminfo;
             if (selectedItem != null)
             {
-                bool choice = await DisplayAlert("Alert!", $"Are you sure you want to remove {selectedItem.Product}?", "Yes", "No");
+                iteminfo = $"{Environment.NewLine}Barcode : {selectedItem.ProductBarcode}{Environment.NewLine}{Environment.NewLine}Product : {selectedItem.Product}{Environment.NewLine}{Environment.NewLine}Price : Rs.{selectedItem.Price}{Environment.NewLine}{Environment.NewLine}Weight : {selectedItem.Weight} Grams{Environment.NewLine}{Environment.NewLine}Do you want to remove {selectedItem.Product} from the cart?";
+                bool choice = await DisplayAlert("Product Details",iteminfo,"Yes, please","No, thanks");
                 if (choice == true)
                 {
                     ShoppingCart.Remove(selectedItem);
                 }
-            }
-        }
-        private async void CartItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            product TappedItem = e.Item as product;
-            string iteminfo;
-            if (TappedItem != null)
-            {
-                iteminfo = $"{Environment.NewLine} Barcode: {TappedItem.ProductBarcode}{Environment.NewLine}{Environment.NewLine} Product : {TappedItem.Product}{Environment.NewLine}{Environment.NewLine} Price : Rs.{TappedItem.Price}{Environment.NewLine}{Environment.NewLine} Weight : {TappedItem.Weight} Grams{Environment.NewLine}";
-                await DisplayAlert("Product Details", iteminfo, "Ok");
             }
         }
         private async void CameraView_OnDetected(object sender, GoogleVisionBarCodeScanner.OnDetectedEventArg e)
@@ -136,9 +127,9 @@ namespace FireAuth
                 try
                 {
                     request = await firebaseHelper.GetProduct(obj[i].DisplayValue);
-                    result += $"**********{Environment.NewLine} Barcode: {obj[i].DisplayValue}{Environment.NewLine}{Environment.NewLine} Product : {request.Product}{Environment.NewLine}{Environment.NewLine} Price : Rs.{request.Price}{Environment.NewLine}{Environment.NewLine} Weight : {request.Weight} Grams{Environment.NewLine}**********";
-                    bool choice = await DisplayAlert("Product Details", result, "Add","Cancel");
-
+                    result += $"{Environment.NewLine}Barcode : {obj[i].DisplayValue}{Environment.NewLine}{Environment.NewLine}Product : {request.Product}{Environment.NewLine}{Environment.NewLine}Price : Rs.{request.Price}{Environment.NewLine}{Environment.NewLine}Weight : {request.Weight} Grams{Environment.NewLine}";
+                    bool choice = await DisplayAlert("Product Details", result, "Add to cart","Cancel");
+                    result = string.Empty;
                     if (choice == true)
                     {
                         ShoppingCart.Add(new product
