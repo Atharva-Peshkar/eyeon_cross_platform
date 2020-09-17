@@ -11,14 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="eyeon_logo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="eyeon_logo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="BarcodeScanner.XF" Version="4.6.1" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.4" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />

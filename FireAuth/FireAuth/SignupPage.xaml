@@ -38,7 +38,7 @@
                     <Button 
                             Text="Sign Up" 
                             TextColor="Honeydew" 
-                            BackgroundColor="LightPink" 
+                            BackgroundColor="#3bb8c3" 
                             CornerRadius="25"
                             Clicked="CreateNewAccount">
                         <VisualStateManager.VisualStateGroups>

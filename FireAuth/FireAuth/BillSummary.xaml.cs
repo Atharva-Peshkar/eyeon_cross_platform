@@ -49,7 +49,7 @@ namespace FireAuth
             string iteminfo;
             if (TappedItem != null)
             {
-                iteminfo = $"{Environment.NewLine} Barcode: {TappedItem.ProductBarcode}{Environment.NewLine}{Environment.NewLine} Product : {TappedItem.Product}{Environment.NewLine}{Environment.NewLine} Price : Rs.{TappedItem.Price}{Environment.NewLine}{Environment.NewLine} Weight : {TappedItem.Weight} Grams{Environment.NewLine}";
+                iteminfo = $"{Environment.NewLine}Barcode: {TappedItem.ProductBarcode}{Environment.NewLine}{Environment.NewLine}Product : {TappedItem.Product}{Environment.NewLine}{Environment.NewLine}Price : Rs.{TappedItem.Price}{Environment.NewLine}{Environment.NewLine}Weight : {TappedItem.Weight} Grams{Environment.NewLine}";
                 await DisplayAlert("Product Details",iteminfo,"Ok");
             }
         }

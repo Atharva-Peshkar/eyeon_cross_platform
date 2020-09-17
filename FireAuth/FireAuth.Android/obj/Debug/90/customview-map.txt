@@ -21,6 +21,7 @@ com.google.android.material.appbar.AppBarLayout;C:\Users\DELL\source\repos\eyeon
 com.google.android.material.bottomnavigation.BottomNavigationView;C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\lp\56\jl\res\layout\bottomtablayout.xml
 com.google.android.material.tabs.TabLayout;C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\lp\56\jl\res\layout\rootlayout.xml
 com.google.android.material.tabs.TabLayout;obj\Debug\90\res\layout\tabbar.xml
+crc64720bb2db43a66fe9.FormsViewPager;C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\lp\56\jl\res\layout\rootlayout.xml
 external-cache-path;C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml

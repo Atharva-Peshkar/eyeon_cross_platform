@@ -6,6 +6,8 @@
              mc:Ignorable="d"
              x:Class="FireAuth.App">
     <Application.Resources>
-
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#3bb8c3"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

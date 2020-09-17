@@ -6,7 +6,7 @@
         <FlexLayout  Direction="Column" Wrap="NoWrap" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Center">
             <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Center" FlexLayout.Basis="100%">
 
-                <Image FlexLayout.AlignSelf="Center" Source="eyeon_logo" HorizontalOptions="Center" HeightRequest="200" WidthRequest="200" Margin="20" />
+                <Image FlexLayout.AlignSelf="Center" Source="skiplane_logo_1" HorizontalOptions="Center" HeightRequest="400" WidthRequest="400" Margin="10" />
 
 
                 <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Stretch" Margin="20" FlexLayout.Basis="70%">
@@ -34,7 +34,7 @@
                         Text="Sign In"
                         Clicked="LoginClicked"
                         Margin="20,10"
-                        BackgroundColor="Plum"
+                        BackgroundColor="#6ac73e"
                         TextColor="FloralWhite"
                         CornerRadius="25">
                         <VisualStateManager.VisualStateGroups>
@@ -65,7 +65,7 @@
                         Text="Sign Up"
                         Clicked="SignUpClicked"
                         Margin="20, 5"
-                        BackgroundColor="Salmon"
+                        BackgroundColor="#3bb8c3"
                         TextColor="FloralWhite"
                         CornerRadius="25">
                         <VisualStateManager.VisualStateGroups>

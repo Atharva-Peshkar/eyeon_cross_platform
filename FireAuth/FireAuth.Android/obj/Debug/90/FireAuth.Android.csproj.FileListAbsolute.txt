@@ -1328,7 +1328,6 @@ C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\De
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\flash.png
-C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\eyeon_logo.png
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\list.png
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\logout.png
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\add.png
@@ -1965,3 +1964,5 @@ C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\De
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\skiplane_logo.png
+C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\skiplane_logo_1.jpg

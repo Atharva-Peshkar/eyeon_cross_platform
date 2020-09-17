@@ -125,9 +125,9 @@
                         <Label VerticalTextAlignment="Center" Grid.Column="2" FontSize="Medium" FontAttributes="Bold" TextColor="DeepPink">Your Cart</Label>
 
                         <Button 
-                            BackgroundColor="Salmon"
+                            BackgroundColor="#6ac73e"
                             TextColor="FloralWhite"
-                            CornerRadius="25" 
+                            CornerRadius="20" 
                             Grid.Column="3" 
                             Clicked="ClearCart" 
                             Text="Clear Cart">
