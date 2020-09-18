@@ -201,7 +201,4 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\skiplane_logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\skiplane_logo_1.jpg" />
-  </ItemGroup>
 </Project>

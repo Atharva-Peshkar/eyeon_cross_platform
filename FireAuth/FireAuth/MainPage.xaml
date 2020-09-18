@@ -6,7 +6,7 @@
         <FlexLayout  Direction="Column" Wrap="NoWrap" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Center">
             <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Center" FlexLayout.Basis="100%">
 
-                <Image FlexLayout.AlignSelf="Center" Source="skiplane_logo_1" HorizontalOptions="Center" HeightRequest="400" WidthRequest="400" Margin="10" />
+                <Image FlexLayout.AlignSelf="Center" Source="skiplane_logo" HorizontalOptions="Center" HeightRequest="400" WidthRequest="400" Margin="10" />
 
 
                 <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" AlignContent="Center" AlignItems="Stretch" Margin="20" FlexLayout.Basis="70%">

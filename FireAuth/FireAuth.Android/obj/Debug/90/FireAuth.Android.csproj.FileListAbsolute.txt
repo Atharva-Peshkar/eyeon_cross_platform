@@ -1965,4 +1965,3 @@ C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\De
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\skiplane_logo.png
-C:\Users\DELL\source\repos\eyeon_cross_platform\FireAuth\FireAuth.Android\obj\Debug\90\res\drawable\skiplane_logo_1.jpg

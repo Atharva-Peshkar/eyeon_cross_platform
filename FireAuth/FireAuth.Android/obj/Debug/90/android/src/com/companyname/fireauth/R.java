@@ -5193,9 +5193,8 @@ public final class R {
     public static final int notification_tile_bg=0x7f070169;
     public static final int notify_panel_notification_icon_bg=0x7f07016a;
     public static final int skiplane_logo=0x7f07016b;
-    public static final int skiplane_logo_1=0x7f07016c;
-    public static final int tooltip_frame_dark=0x7f07016d;
-    public static final int tooltip_frame_light=0x7f07016e;
+    public static final int tooltip_frame_dark=0x7f07016c;
+    public static final int tooltip_frame_light=0x7f07016d;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
