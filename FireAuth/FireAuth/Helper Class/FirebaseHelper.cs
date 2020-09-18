@@ -18,6 +18,7 @@ namespace FireAuth.Helper_Class
 
         readonly FirebaseClient firebase = new FirebaseClient("https://eyeon-baf78.firebaseio.com/");
 
+        //Helper functions to conduct business operations using Firebase realtime database.
         public async Task<List<product>> GetAllProducts()
         {
             return (await firebase

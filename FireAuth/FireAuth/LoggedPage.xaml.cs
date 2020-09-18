@@ -23,6 +23,8 @@ namespace FireAuth
     {
         public ObservableCollection<product> ShoppingCart { get; set; }
         string orderuid = string.Empty;
+
+        //Google vision API is used for barcode scanner.
         public LoggedPage()
         {
             InitializeComponent();
